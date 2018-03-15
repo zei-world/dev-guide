@@ -1,3 +1,5 @@
+# Développement back-end (Symfony)
+
 ### Encodage
 - Vous **devez** utiliser `UTF-8` sans `BOM` pour l'encodage des fichiers.
 - Vous **devez** laisser une ligne vide à la fin de chaque fichier
