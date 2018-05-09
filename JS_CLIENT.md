@@ -50,6 +50,29 @@ var fn = function() { // Pas de fonctions sous forme d'expression
 }; // Pas de point virgule à la fin
 ```
 
+Optimisez les conditions dans votre fonctions et favorisez les `return` aux `else` dans une condition :
+```javascript
+// Version non optimisée
+function() {
+  if(success) {
+    if(error.code === 0) {
+      return "Tout est OK";
+    } else {
+      return "Code erreur : " + error.code;
+    }
+  } else {
+    return "Erreur !;
+  }
+}
+
+// Version optimisée
+function() {
+  if(!success) return "Erreur !; // Ordre respecté
+  if(error.code !== 0) return "Code erreur : " + error.code; // Erreurs en premier
+  return "Tout est OK"; // Fonctionnement normal en dernier
+}
+```
+
 ## Conditions
 Les conditions sont écrites comme cela :
 ```javascript
@@ -58,7 +81,7 @@ if(success) { // Toujours utiliser des accolades et effectuer des retours à la 
 }
 ```
 
-Utilisez TOUJOURS une vérification du type dans vos comparaisons avec `===` ou `!==`
+Utilisez TOUJOURS une vérification du type dans vos comparaisons avec `===` ou `!==`.
 
 ## Objets et tableaux
 Déclarez-les de la manière suivante :
