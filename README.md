@@ -13,3 +13,4 @@ Merci à tous !
 - [Déroulé du développement](PROCESS.md)
 - [Développement back-end (Symfony)](BACKEND.md)
 - [Règles front-end (CSS et JS)](FRONTEND.md)
+- [Ecriture du Javascript pour le côté client](JS_CLIENT.md)
