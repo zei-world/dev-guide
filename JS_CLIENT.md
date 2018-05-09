@@ -61,14 +61,18 @@ function() {
       return "Code erreur : " + error.code;
     }
   } else {
-    return "Erreur !;
+    return "Erreur !";
   }
 }
 
 // Version optimisée
 function() {
-  if(!success) return "Erreur !; // Ordre respecté
-  if(error.code !== 0) return "Code erreur : " + error.code; // Erreurs en premier
+  if(!success) { // Ordre respecté
+    return "Erreur !;
+  }
+  if(error.code !== 0) { // Erreurs en premier
+    return "Code erreur : " + error.code;
+  }
   return "Tout est OK"; // Fonctionnement normal en dernier
 }
 ```
