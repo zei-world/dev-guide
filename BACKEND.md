@@ -54,6 +54,19 @@ class Zei extends Truc implements BiduleInterface
     }
 
     /**
+     * @param string
+     */
+    public function setBegonia($chaine)
+    {
+        try {
+            $chaine = $this->bidouilleTexte($chaine);
+        } catch (Exception $e) {
+            $chaine = 'Default Begonia';
+        }
+        $this->begonia = $chaine;
+    }
+
+    /**
      * Fait des choses étranges à une chaine de caractères
      *
      * @param bool|string $chaine Une chaine de caractères à modifier
@@ -80,6 +93,8 @@ class Zei extends Truc implements BiduleInterface
 
         if($chaine === $tableau['uneValeur']) {
             return substr($chaine, 0, 5).'nawak';
+        } else {
+            return "super $chaine";
         }
     }
 
