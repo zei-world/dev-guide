@@ -68,7 +68,7 @@ function() {
 // Version optimisée
 function() {
   if(!success) { // Ordre respecté
-    return "Erreur !;
+    return "Erreur !";
   }
   if(error.code !== 0) { // Erreurs en premier
     return "Code erreur : " + error.code;
